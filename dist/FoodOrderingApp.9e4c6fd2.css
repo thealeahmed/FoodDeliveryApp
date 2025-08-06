@@ -1,0 +1,52 @@
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-items > ul {
+  padding-left: 20px;
+  font-size: 24px;
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.restaurant-card {
+  cursor: pointer;
+  border: 1px solid #000;
+  width: 200px;
+  height: 300px;
+  margin: 5px;
+  padding: 5px;
+  transition: transform .3s;
+  display: block;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05);
+}
+
+.search-bar {
+  padding: 10px;
+}
+
+.res-img {
+  width: 190px;
+  height: 130px;
+}
+
+.restaurant-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+/*# sourceMappingURL=FoodOrderingApp.9e4c6fd2.css.map */
