@@ -1,55 +1,3 @@
-/**
- * Header
- *  -logo
- *  -nav items
- * Body
- *  -Search
- *  -RestaurantContainer
- *        -img
- *        -Name of res,star rating,cuisines,deliveryTime
- * 
- */
-
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-
-const Header=()=>{
-    return(
-        <div className="header">
-            <div >
-                <img className="logo" src="https://img.freepik.com/free-vector/delivery-logo-template_23-2147880262.jpg?t=st=1754485012~exp=1754488612~hmac=22f663edde80b0d3196a8a29586c8d59d020209d158b245654cb59b4b67d5100&w=1480"/>
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-}
-
-// const styleCard ={
-// backgroundColor:"#f0f0f0",
-// }
-const RestaurantCard=(props)=> {
-    const {resData}=props 
-        return(
-            <div className='restaurant-card' style={{ backgroundColor:"#f0f0f0",}}>
-                <img className='res-img' src='https://images.deliveryhero.io/image/fd-pk/LH/t4wq-listing.jpg?width=240&height=240'/>
-                <h3>{resData.resName}</h3>
-                <h4>{resData.cuisine}</h4>
-                <h4>{resData.rating}</h4>
-                <h4>{resData.deliveryTime +" Delivery Time"}</h4>
-
-            </div>
-        )
-}
-
 const resList=[
   {
     "id": 1,
@@ -59,7 +7,7 @@ const resList=[
     "deliveryTime": "30 minutes",
     "priceRange": "$$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1604908177222-d88a1d63f3c3",
+    "image": "https://bakewithzoha.com/wp-content/uploads/2024/03/chicken-biryani-5-scaled.jpg",
     "location": "Gulshan-e-Iqbal, Karachi",
     "tags": [
       "Desi",
@@ -75,7 +23,7 @@ const resList=[
     "deliveryTime": "38 minutes",
     "priceRange": "$$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+    "image": "https://images.unsplash.com/photo-1556745750-68295fefafc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D",
     "location": "Clifton, Karachi",
     "tags": [
       "Fast Food",
@@ -90,7 +38,7 @@ const resList=[
     "deliveryTime": "15 minutes",
     "priceRange": "$$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1606755962773-0c4f7b84a917",
+    "image": "https://cdn.informaconnect.com/platform/files/public/2025-08/background/800x1000/KFC%20Shutterstock%201.jpg?VersionId=qOzZ7n_n1EKbIQRv8hzh6lo4GOYf55UH",
     "location": "Multiple Locations",
     "tags": [
       "International",
@@ -106,7 +54,7 @@ const resList=[
     "deliveryTime": "30 minutes",
     "priceRange": "$$",
     "isOpen": false,
-    "image": "https://images.unsplash.com/photo-1602334405972-e1c4ed5d89bc",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "location": "DHA Phase 6, Karachi",
     "tags": [
       "Burgers",
@@ -122,7 +70,7 @@ const resList=[
     "deliveryTime": "35 minutes",
     "priceRange": "$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1605478522019-558a174a5f7b",
+    "image": "https://images.unsplash.com/photo-1556742205-e10c9486e506?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxzZWFyY2h8OHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D",
     "location": "Bahadurabad, Karachi",
     "tags": [
       "Chinese",
@@ -138,7 +86,7 @@ const resList=[
     "deliveryTime": "25 minutes",
     "priceRange": "$$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1594007654729-e3ff1404d86b",
+    "image": "https://plus.unsplash.com/premium_photo-1679434184720-f729541052eb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D",
     "location": "North Nazimabad, Karachi",
     "tags": [
       "Pizza",
@@ -154,7 +102,7 @@ const resList=[
     "deliveryTime": "20 minutes",
     "priceRange": "$$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1631515243344-6b7d9d7c563c",
+    "image": "https://imgs.search.brave.com/KswUWQBg8mQhu6SwbhPSmtyQ04hpRS8WL97cLIgp78Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTYy/OTc3MTA3Ny9waG90/by9uZXcteW9yay1u/ZXcteW9yay1hLXBl/cnNvbi13YWxrcy1v/dXQtb2YtYS1zdWJ3/YXktc2FuZHdpY2gt/c3RvcmUtb24td2F0/ZXItc3RyZWV0LW9u/LWF1Z3VzdC0yMS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/UWE1M09FYTNWUG10/Y0dFOGtUVXpDa0hx/LWVCUkdQQ3ZlbGtH/QVFvQkZPaz0",
     "location": "Multiple Locations",
     "tags": [
       "Healthy",
@@ -170,7 +118,7 @@ const resList=[
     "deliveryTime": "18 minutes",
     "priceRange": "$",
     "isOpen": true,
-    "image": "https://images.unsplash.com/photo-1598133894007-a21d27410d62",
+    "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D",
     "location": "Nazimabad, Karachi",
     "tags": [
       "Wraps",
@@ -186,7 +134,7 @@ const resList=[
     "deliveryTime": "40 minutes",
     "priceRange": "$$$",
     "isOpen": false,
-    "image": "https://images.unsplash.com/photo-1606756784321-089d0c7c3f4c",
+    "image": "https://caffepraha.com/cdn/shop/files/Untitled_500_x_500_px_450_x_940_px_450_x_900_px_3.jpg?v=1727957186&width=1080",
     "location": "DHA Phase 8, Karachi",
     "tags": [
       "Desserts",
@@ -211,32 +159,4 @@ const resList=[
     ]
   }
 ]
-
-//unique id>>>>>>>>>>>>>>>>>index as key>>>>>>>>>>>>>not using keys(not acceptable)
-const Body =()=>{
-    return(
-        <div>
-            <div className='search-bar'>Search
-            </div>
-            <div className='restaurant-container'>
-                {/* //restaurantCard */}
-                {
-                    resList.map(restaurant => (
-                    <RestaurantCard key={restaurant.id} resData={restaurant}/>))
-                }
-            </div>
-
-        </div>
-    )
-}
-
-const AppLayout= ()=>{
-    return <div className="app">
-        <Header/>
-        <Body/>
-
-    </div>
-}
-
-const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
+export default resList;
