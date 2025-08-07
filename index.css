@@ -1,48 +1,61 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
+    align-items: center;         /* vertically centers logo and nav items */
     border: 1px solid black;
+    padding: 10px 20px;
 }
+
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 80px;                 /* adjust as needed */
+    height: auto;                /* maintains aspect ratio */
+    object-fit: contain;
+    display: block;
 }
-.nav-items > ul{
+
+/* Nav bar styles */
+.nav-items > ul {
     display: flex;
-    padding-left: 20px ;
+    padding-left: 0;
+    margin: 0;
     list-style: none;
     font-size: 24px;
 }
-.nav-items > ul > li{
-    padding: 10px;
-    margin: 10px;
+
+.nav-items > ul > li {
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
 }
-.restaurant-card{
+
+/* Restaurant card styles */
+.restaurant-card {
     width: 200px;
     height: 300px;
     border: 1px solid black;
-    padding:5px;
+    padding: 5px;
     display: block;
     transition: transform 0.3s ease;
     cursor: pointer;
     margin: 5px;
+    background-color: #f0f0f0;
+}
 
+.restaurant-card:hover {
+    transform: scale(1.05);
+}
 
-}
-.restaurant-card:hover{
-     transform: scale(1.05); 
-}
-.search-bar{
-    padding:  10px;
-}
-.res-img{
-    width: 190px;
+.res-img {
+    width: 100%;
     height: 130px;
-    
-    
+    object-fit: cover;
 }
-.restaurant-container{
+
+.restaurant-container {
     display: flex;
     flex-wrap: wrap;
-    
+}
+
+.search-bar {
+    padding: 10px;
 }

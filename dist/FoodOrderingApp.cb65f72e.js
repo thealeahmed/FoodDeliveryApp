@@ -700,12 +700,12 @@ const Header = ()=>{
                     src: "https://img.freepik.com/free-vector/delivery-logo-template_23-2147880262.jpg?t=st=1754485012~exp=1754488612~hmac=22f663edde80b0d3196a8a29586c8d59d020209d158b245654cb59b4b67d5100&w=1480"
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 21,
+                    lineNumber: 22,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -716,45 +716,45 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 25,
+                            lineNumber: 26,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About us"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 26,
+                            lineNumber: 27,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact us"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 27,
+                            lineNumber: 28,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "App.js",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 9
     }, undefined);
 };
@@ -763,7 +763,7 @@ _c = Header;
 // backgroundColor:"#f0f0f0",
 // }
 const RestaurantCard = (props)=>{
-    const { resName, cuisine, rating, deliveryTime } = props;
+    const { resData } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-card",
         style: {
@@ -775,46 +775,208 @@ const RestaurantCard = (props)=>{
                 src: "https://images.deliveryhero.io/image/fd-pk/LH/t4wq-listing.jpg?width=240&height=240"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 42,
-                columnNumber: 17
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: resName
-            }, void 0, false, {
-                fileName: "App.js",
                 lineNumber: 43,
                 columnNumber: 17
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: cuisine
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: resData.resName
             }, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 44,
                 columnNumber: 17
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: rating
+                children: resData.cuisine
             }, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 45,
                 columnNumber: 17
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: deliveryTime
+                children: resData.rating
             }, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 46,
+                columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: resData.deliveryTime + " Delivery Time"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 47,
                 columnNumber: 17
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 13
     }, undefined);
 };
 _c1 = RestaurantCard;
-const body = ()=>{
+const resList = [
+    {
+        "id": 1,
+        "resName": "Karachi Biryani",
+        "cuisine": "Biryani, Desi Food",
+        "rating": 4.9,
+        "deliveryTime": "30 minutes",
+        "priceRange": "$$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1604908177222-d88a1d63f3c3",
+        "location": "Gulshan-e-Iqbal, Karachi",
+        "tags": [
+            "Desi",
+            "Spicy",
+            "Popular"
+        ]
+    },
+    {
+        "id": 2,
+        "resName": "RoundAbout Restaurant",
+        "cuisine": "Fast Food",
+        "rating": 4.7,
+        "deliveryTime": "38 minutes",
+        "priceRange": "$$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+        "location": "Clifton, Karachi",
+        "tags": [
+            "Fast Food",
+            "Family Friendly"
+        ]
+    },
+    {
+        "id": 3,
+        "resName": "KFC",
+        "cuisine": "Fast Food",
+        "rating": 5.0,
+        "deliveryTime": "15 minutes",
+        "priceRange": "$$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1606755962773-0c4f7b84a917",
+        "location": "Multiple Locations",
+        "tags": [
+            "International",
+            "Burgers",
+            "Fried Chicken"
+        ]
+    },
+    {
+        "id": 4,
+        "resName": "GrubShack",
+        "cuisine": "Burgers",
+        "rating": 4.9,
+        "deliveryTime": "30 minutes",
+        "priceRange": "$$",
+        "isOpen": false,
+        "image": "https://images.unsplash.com/photo-1602334405972-e1c4ed5d89bc",
+        "location": "DHA Phase 6, Karachi",
+        "tags": [
+            "Burgers",
+            "Cheesy",
+            "Late Night"
+        ]
+    },
+    {
+        "id": 5,
+        "resName": "Chopstick Express",
+        "cuisine": "Chinese",
+        "rating": 4.5,
+        "deliveryTime": "35 minutes",
+        "priceRange": "$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1605478522019-558a174a5f7b",
+        "location": "Bahadurabad, Karachi",
+        "tags": [
+            "Chinese",
+            "Noodles",
+            "Quick"
+        ]
+    },
+    {
+        "id": 6,
+        "resName": "Pizza Point",
+        "cuisine": "Pizza",
+        "rating": 4.3,
+        "deliveryTime": "25 minutes",
+        "priceRange": "$$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1594007654729-e3ff1404d86b",
+        "location": "North Nazimabad, Karachi",
+        "tags": [
+            "Pizza",
+            "Cheese Lovers",
+            "Family Deal"
+        ]
+    },
+    {
+        "id": 7,
+        "resName": "Subway",
+        "cuisine": "Healthy, Sandwiches",
+        "rating": 4.2,
+        "deliveryTime": "20 minutes",
+        "priceRange": "$$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1631515243344-6b7d9d7c563c",
+        "location": "Multiple Locations",
+        "tags": [
+            "Healthy",
+            "Quick",
+            "Customizable"
+        ]
+    },
+    {
+        "id": 8,
+        "resName": "Hot & Roll",
+        "cuisine": "Shawarma, Rolls",
+        "rating": 4.6,
+        "deliveryTime": "18 minutes",
+        "priceRange": "$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1598133894007-a21d27410d62",
+        "location": "Nazimabad, Karachi",
+        "tags": [
+            "Wraps",
+            "Desi",
+            "Budget Friendly"
+        ]
+    },
+    {
+        "id": 9,
+        "resName": "Cafe Praha",
+        "cuisine": "Continental, Desserts",
+        "rating": 4.8,
+        "deliveryTime": "40 minutes",
+        "priceRange": "$$$",
+        "isOpen": false,
+        "image": "https://images.unsplash.com/photo-1606756784321-089d0c7c3f4c",
+        "location": "DHA Phase 8, Karachi",
+        "tags": [
+            "Desserts",
+            "Coffee",
+            "Date Night"
+        ]
+    },
+    {
+        "id": 10,
+        "resName": "The Nihari Inn",
+        "cuisine": "Desi, Nihari",
+        "rating": 4.9,
+        "deliveryTime": "32 minutes",
+        "priceRange": "$$",
+        "isOpen": true,
+        "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0",
+        "location": "Saddar, Karachi",
+        "tags": [
+            "Desi",
+            "Traditional",
+            "Spicy"
+        ]
+    }
+];
+//unique id>>>>>>>>>>>>>>>>>index as key>>>>>>>>>>>>>not using keys(not acceptable)
+const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -822,89 +984,64 @@ const body = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 54,
+                lineNumber: 219,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resName: "Karachi Biryani",
-                        Cuisine: "Biryani Desi Food",
-                        rating: "4.9 stars",
-                        deliveryTime: "30 minutes"
-                    }, void 0, false, {
+                children: resList.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        resData: restaurant
+                    }, restaurant.id, false, {
                         fileName: "App.js",
-                        lineNumber: 59,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resName: "RoundAbout Restaurant",
-                        Cuisine: "Fast Food",
-                        rating: "4.7 stars",
-                        deliveryTime: "38 minutes"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 65,
-                        columnNumber: 19
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resName: "KFC",
-                        Cuisine: "Fast Food",
-                        rating: "5 stars",
-                        deliveryTime: "15 minutes"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 71,
-                        columnNumber: 19
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resName: "GrubShack",
-                        Cuisine: "Burgers",
-                        rating: "4.9 stars",
-                        deliveryTime: "30 minutes"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 77,
-                        columnNumber: 19
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                        lineNumber: 225,
+                        columnNumber: 21
+                    }, undefined))
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 56,
+                lineNumber: 221,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 53,
+        lineNumber: 218,
         columnNumber: 9
     }, undefined);
 };
+_c2 = Body;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
-            Header(),
-            body()
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 235,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 236,
+                columnNumber: 9
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 90,
+        lineNumber: 234,
         columnNumber: 12
     }, undefined);
 };
-_c2 = AppLayout;
+_c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 98,
+    lineNumber: 242,
     columnNumber: 13
 }, undefined));
-var _c, _c1, _c2;
+var _c, _c1, _c2, _c3;
 $RefreshReg$(_c, "Header");
 $RefreshReg$(_c1, "RestaurantCard");
-$RefreshReg$(_c2, "AppLayout");
+$RefreshReg$(_c2, "Body");
+$RefreshReg$(_c3, "AppLayout");
 
   $parcel$ReactRefreshHelpers$4931.postlude(module);
 } finally {
