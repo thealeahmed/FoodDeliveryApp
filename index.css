@@ -56,6 +56,8 @@
     flex-wrap: wrap;
 }
 
-.search-bar {
-    padding: 10px;
+.filter-btn {
+    /* padding: 10px; */
+    margin: 10px;
+    cursor: pointer;
 }
