@@ -1,10 +1,20 @@
 import RestaurantCard  from "./RestaurantCard";
 import resList from "../utils/mockData";   
-import { useState } from "react";   
+import { useState,useEffect } from "react";   
 
 const Body =()=>{
     const [listOfRestaurant,setlistOfRestaurant]=useState(resList);
 
+    useEffect(()=>{
+        fetchData();
+    },[])
+        //  
+        const fetchData=async()=>{
+            const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+                );
+                const json=await data.json(); 
+                console.log(json)
+        }
     return(
         <div>
             {/* <div className='search-bar'>Search
@@ -15,7 +25,7 @@ const Body =()=>{
                     const topRated=resList.filter(
                         (res)=>res.rating > 4.5
                 ); 
-                setlistOfRestaurant(topRated);
+                setlistOfRestaurant (topRated);
                 }}
                 >
                     Top Rated Restaurant</button>
@@ -32,3 +42,7 @@ const Body =()=>{
     )
 }
 export default Body;
+
+//when the body component is render as soon as the render is finished it will call
+//the callback function in useEffect
+//useEffect takes two arguments first is callback fn and the second is dependency array 
