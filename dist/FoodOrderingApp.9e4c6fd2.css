@@ -13,6 +13,15 @@
   display: block;
 }
 
+.filter {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.search {
+  margin: 10px;
+}
+
 .nav-items > ul {
   margin: 0;
   padding-left: 0;

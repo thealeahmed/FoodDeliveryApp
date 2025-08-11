@@ -5,8 +5,10 @@ import { ClipLoader } from "react-spinners";
 import { Shimmer } from "./Shimmer";    
 const Body =()=>{
  const [listOfRestaurant,setlistOfRestaurant]=useState([]);
- console.log(listOfRestaurant)
- useEffect(()=>{
+ const[searchText,setSearchText]=useState("");
+ const[filteredRestaurant,setfilteredRestaurant]=useState();
+
+ useEffect(()=>{ 
         fetchData();
     },[])
         //  
@@ -20,8 +22,10 @@ const Body =()=>{
                   );
                   //Optional Chaining
                 const restaurants = gridWidgetCard?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+
                 console.log('restaurants', restaurants)
                 setlistOfRestaurant(restaurants);
+                setfilteredRestaurant(restaurants)
         }
         //conditional rendering
      if (listOfRestaurant.length === 0) {
@@ -45,6 +49,24 @@ const Body =()=>{
             {/* <div className='search-bar'>Search
             </div> */}
             <div className="filter">
+               <div className="search">
+                <input type="text"  className="search-bar" value={searchText} onChange=
+                {(e)=>{
+                   setSearchText(e.target.value) 
+                }}/>
+                <button  onClick={
+                        ()=>{ 
+                          const searched=listOfRestaurant.filter(
+                            (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                          )  
+                         setfilteredRestaurant(searched) 
+                        
+                        }  
+                    }>Search
+                   
+                </button>
+                 
+               </div>
                 <button className="filter-btn" 
                 onClick={()=> {
                     const topRated = listOfRestaurant.filter(
@@ -58,7 +80,7 @@ const Body =()=>{
             <div className='restaurant-container'>
                 {/* //restaurantCard */}
 
-                {Array.isArray(listOfRestaurant) && listOfRestaurant.map(restaurants => (
+                {Array.isArray(filteredRestaurant) && filteredRestaurant.map(restaurants => (
                  <RestaurantCard 
             key={restaurants.info.id}
             resData={restaurants}

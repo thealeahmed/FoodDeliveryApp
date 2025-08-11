@@ -12,7 +12,14 @@
     object-fit: contain;
     display: block;
 }
-
+.filter{
+    display: flex;
+    justify-content: space-evenly;
+}
+.search{
+    margin: 10px;
+     
+}
 /* Nav bar styles */
 .nav-items > ul {
     display: flex;
