@@ -1,7 +1,8 @@
 import RestaurantCard  from "./RestaurantCard";
 import resList from "../utils/mockData";  
-import { useState,useEffect } from "react";   
-
+import { useState,useEffect } from "react"; 
+import { ClipLoader } from "react-spinners";  
+import { Shimmer } from "./Shimmer";    
 const Body =()=>{
  const [listOfRestaurant,setlistOfRestaurant]=useState([]);
  console.log(listOfRestaurant)
@@ -17,12 +18,29 @@ const Body =()=>{
                 const gridWidgetCard = json.data.cards.find(
                  (c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget"
                   );
+                  //Optional Chaining
                 const restaurants = gridWidgetCard?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
                 console.log('restaurants', restaurants)
                 setlistOfRestaurant(restaurants);
         }
-
-    return(
+        //conditional rendering
+     if (listOfRestaurant.length === 0) {
+        return <Shimmer/> 
+//   return (
+//     <div
+//       style={{
+//         display: "flex",
+//         justifyContent: "center",
+//         alignItems: "center",
+//         height: "100vh"
+//       }}
+//     >
+//       <ClipLoader color="#36d7b7" size={50} />
+//     </div>
+//   );
+}
+//ternary operator
+    return (listOfRestaurant.length === 0)?  <Shimmer/> : (
         <div>
             {/* <div className='search-bar'>Search
             </div> */}
