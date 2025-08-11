@@ -1,5 +1,5 @@
 import RestaurantCard  from "./RestaurantCard";
-import resList from "../utils/mockData";   
+import resList from "../utils/mockData";  
 import { useState,useEffect } from "react";   
 
 const Body =()=>{
@@ -14,9 +14,12 @@ const Body =()=>{
                 );
                 const json=await data.json(); 
                 console.log(json)     
-                    const restaurants = json?.data?.cards?.[2]?.card?.card.gridElements.infoWithStyle.restaurants || [];
-                    console.log('restaurants', restaurants)
-                         setlistOfRestaurant(restaurants);
+                const gridWidgetCard = json.data.cards.find(
+                 (c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget"
+                  );
+                const restaurants = gridWidgetCard?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+                console.log('restaurants', restaurants)
+                setlistOfRestaurant(restaurants);
         }
 
     return(
@@ -40,7 +43,7 @@ const Body =()=>{
                 {Array.isArray(listOfRestaurant) && listOfRestaurant.map(restaurants => (
                  <RestaurantCard 
             key={restaurants.info.id}
-            resData={restaurants.info}
+            resData={restaurants}
         />
     ))}
             </div>

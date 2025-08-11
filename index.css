@@ -30,8 +30,8 @@
 
 /* Restaurant card styles */
 .restaurant-card {
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    /* height: 300px; */
     border: 1px solid black;
     padding: 5px;
     display: block;
