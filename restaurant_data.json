@@ -9,11 +9,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1604908177222-d88a1d63f3c3",
     "location": "Gulshan-e-Iqbal, Karachi",
-    "tags": [
-      "Desi",
-      "Spicy",
-      "Popular"
-    ]
+    "tags": ["Desi", "Spicy", "Popular"]
   },
   {
     "id": 2,
@@ -25,10 +21,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
     "location": "Clifton, Karachi",
-    "tags": [
-      "Fast Food",
-      "Family Friendly"
-    ]
+    "tags": ["Fast Food", "Family Friendly"]
   },
   {
     "id": 3,
@@ -40,11 +33,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1606755962773-0c4f7b84a917",
     "location": "Multiple Locations",
-    "tags": [
-      "International",
-      "Burgers",
-      "Fried Chicken"
-    ]
+    "tags": ["International", "Burgers", "Fried Chicken"]
   },
   {
     "id": 4,
@@ -56,11 +45,7 @@
     "isOpen": false,
     "image": "https://images.unsplash.com/photo-1602334405972-e1c4ed5d89bc",
     "location": "DHA Phase 6, Karachi",
-    "tags": [
-      "Burgers",
-      "Cheesy",
-      "Late Night"
-    ]
+    "tags": ["Burgers", "Cheesy", "Late Night"]
   },
   {
     "id": 5,
@@ -72,11 +57,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1605478522019-558a174a5f7b",
     "location": "Bahadurabad, Karachi",
-    "tags": [
-      "Chinese",
-      "Noodles",
-      "Quick"
-    ]
+    "tags": ["Chinese", "Noodles", "Quick"]
   },
   {
     "id": 6,
@@ -88,11 +69,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1594007654729-e3ff1404d86b",
     "location": "North Nazimabad, Karachi",
-    "tags": [
-      "Pizza",
-      "Cheese Lovers",
-      "Family Deal"
-    ]
+    "tags": ["Pizza", "Cheese Lovers", "Family Deal"]
   },
   {
     "id": 7,
@@ -104,11 +81,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1631515243344-6b7d9d7c563c",
     "location": "Multiple Locations",
-    "tags": [
-      "Healthy",
-      "Quick",
-      "Customizable"
-    ]
+    "tags": ["Healthy", "Quick", "Customizable"]
   },
   {
     "id": 8,
@@ -120,11 +93,7 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1598133894007-a21d27410d62",
     "location": "Nazimabad, Karachi",
-    "tags": [
-      "Wraps",
-      "Desi",
-      "Budget Friendly"
-    ]
+    "tags": ["Wraps", "Desi", "Budget Friendly"]
   },
   {
     "id": 9,
@@ -136,11 +105,7 @@
     "isOpen": false,
     "image": "https://images.unsplash.com/photo-1606756784321-089d0c7c3f4c",
     "location": "DHA Phase 8, Karachi",
-    "tags": [
-      "Desserts",
-      "Coffee",
-      "Date Night"
-    ]
+    "tags": ["Desserts", "Coffee", "Date Night"]
   },
   {
     "id": 10,
@@ -152,10 +117,6 @@
     "isOpen": true,
     "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0",
     "location": "Saddar, Karachi",
-    "tags": [
-      "Desi",
-      "Traditional",
-      "Spicy"
-    ]
+    "tags": ["Desi", "Traditional", "Spicy"]
   }
 ]

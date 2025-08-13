@@ -1,9 +1,9 @@
-const About=()=>{
-    return(
-        <div>
-        <h1>About</h1>
-        <h2>This is my practice Project about a food delivery</h2>
-        </div>
-    )
-}
-export default About
+const About = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <h2>This is my practice Project about a food delivery</h2>
+    </div>
+  );
+};
+export default About;
