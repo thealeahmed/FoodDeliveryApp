@@ -1,11 +1,21 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../features/cartSlice";
 
 const ItemList = ({ items }) => {
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <div className="space-y-4">
-      {items.map((item) => {
-        const info = item.card.info;
+      {items.map((item,key) => {
+        // handle both cases: API data (item.card.info) OR cart data (item itself)
+        const info = item.card?.info || item;  
+
         const price = info.price ? info.price / 100 : info.defaultPrice / 100;
 
         return (
@@ -41,7 +51,10 @@ const ItemList = ({ items }) => {
                 alt={info.name}
                 className="w-full h-full rounded-lg object-cover"
               />
-              <button className="absolute bottom-1 left-1 right-1 bg-white text-green-600 font-bold text-sm py-1 rounded shadow-md hover:bg-green-50 transition">
+              <button
+                className="absolute bottom-1 left-1 right-1 bg-white text-green-600 font-bold text-sm py-1 rounded shadow-md hover:bg-green-50 transition"
+                onClick={() => handleAddItem(info)}
+              >
                 ADD
               </button>
             </div>

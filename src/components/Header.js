@@ -2,11 +2,16 @@ import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 import LogIn from "./LogIn"; 
 import Cart from "./Cart";
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const isOnline = useOnlineStatus();
+  //Subscribing to the store uisng Selector
+   const cartItems=useSelector((store)=>store.cart.items);
+   console.log(cartItems);
+
   return (
     <div  className="flex bg-cyan-600 justify-between shadow-lg mb-3  ">
       <div>
@@ -49,7 +54,7 @@ const Header = () => {
 
 
     <button className="px-4 py-2 bg-blue-500 text-white rounded">
-      Cart
+      Cart-({cartItems.length})
     </button>
     </Link>
   </li>
